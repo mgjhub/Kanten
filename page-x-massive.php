@@ -5,7 +5,7 @@
   <style>
 
     body {
-      background-color: #1C1C1C;
+      background-color: #3a2d28;
       color: #f2f2f2;
       margin: 0;
       background-image: url('<?php echo get_template_directory_uri() ?>/images/Xm1.png'); 
@@ -181,16 +181,15 @@ padding: 40px;
     
     .hero {
       position: relative;
-      height: 100vh;
+      height: 90vh;
+      width: 100vw;
       overflow: hidden;
     }
 
     .hero img {
       width: 100%;
-      height: auto;
+      height: 100%;
       position: absolute;
-      top: 0;
-      left: 0;
       object-fit: cover;
     }
 
@@ -306,6 +305,7 @@ padding: 40px;
     
 .photo-gallery {
   padding: 0 75px;
+   margin-bottom: 75px;
 }
     
 .gallery-container {
@@ -319,13 +319,12 @@ padding: 40px;
   position: absolute; 
   left: 0;
   width: 100%;
-  height: 100%;
   background-color: #387341;
   opacity: 0.2;
   filter: blur(20px);
   z-index: -1;
 }
-    
+
 .gallery-slides {
   display: flex;
   overflow-x: scroll;
@@ -334,12 +333,13 @@ padding: 40px;
   scroll-padding: 10px;
   width: 80%;
   margin: 0 auto;
+  align-items: center;
 }
 
 .gallery-slide {
   flex-shrink: 0;
   width: calc(100% / 3);
-  padding: 0 20px;
+  padding: 20px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -347,9 +347,11 @@ padding: 40px;
 
 .gallery-slide img {
   width: 100%;
-  height: 500px;
+  height: 100%;
   object-fit: cover;
+  box-shadow: 2px 2px 10px #080605;
 }
+
 
 .navigation-arrow {
   position: absolute;
@@ -589,7 +591,8 @@ header {
     padding: 20px;
       border: 2px solid #f2f2f2;
   } 
-}  
+} 
+
  @media (max-width: 1500px){
       
         .hero {
@@ -603,16 +606,15 @@ header {
          line-height: 1.3rem;
          }
        }
-    }  
+       
         @media (max-width: 1250px){
       
         .hero {
     height: 75vh;
   }
-      @media (max-width: 1200px){
-        .hero {
-    height: 80vh;
-  }
+        }
+        
+      @media (max-width: 1200px) {
 
               .container-top {
                 display: flex;
@@ -659,49 +661,57 @@ header {
   }
    }
       
-      @media (max-width: 1000px){
-      
-        .hero {
-    height: 35vh;
-  }
-        
-       @media (max-width: 850px){
-      
-        .hero {
-    height: 35vh;
-  }    
+@media (max-width: 1000px){
+    .hero {
+        height: auto;
+        width: 100vw;
     }
-       
+    
+    .hero img {
+        position: relative;
+    }
+}
 
-@media (max-width: 750px){
-      
-        .hero {
-    height: 45vh;
-  }    
+@media (max-width: 950px) {
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+        height: fit-content;
     }
-       
- @media (max-width: 650px){
-      
-        .hero {
-    height: 38vh;
-  }    
+    
+    .footer-left, .footer-middle, .footer-right {
+        flex: none;
     }
-       
-       
-              
- @media (max-width: 550px){
-      
-        .hero {
-    height: 32vh;
-  }    
+    
+    .footer-middle {
+        align-items: flex-start;
     }
-       
- @media (max-width: 450px){
-      
-        .hero {
-    height: 28vh;
-  }    
+    
+    .footer-middle .logo {
+        margin: 0;
     }
+    
+    .footer-middle .footer-text {
+        text-align: left;
+    }
+}
+
+@media (max-width: 700px) {
+.box {
+  max-width: 100%;
+}
+
+.box.right {
+  margin: 0;
+  padding: 25px 75px 125px 75px;
+}
+
+.box.left {
+  margin: 0;
+  padding: 75px 75px 25px 75px;
+}
+}
+
 
 </style>
 </head>
@@ -733,7 +743,7 @@ header {
   </header>
 
   <section class="hero">
-    <img src="<?php echo get_template_directory_uri() ?>/images/backregtop.png" alt="reggae3"> 
+    <img src="<?php echo get_template_directory_uri() ?>/images/reggae-ny.jpg" alt="reggae"> 
   </section>
 
   <hr class="section-divider divider-1">
@@ -755,8 +765,17 @@ header {
   </div>
 </div>
 
-    <hr class="section-divider divider-2">
 
+ <hr class="section-divider divider-3">
+
+<section class="photo-gallery">
+  <div class="overlay-box"></div>
+  <h2 class="section-title">Galleri</h2>
+  <?php the_content() ?>
+</section>
+
+    <hr class="section-divider divider-2">
+<div class="container">
     <div class="container-bottom">
     <div class="box right overlay-box">
         <div class="text">
@@ -772,14 +791,8 @@ header {
         <img src="<?php echo get_template_directory_uri() ?>/images/xmassive2.jpg" alt="xmassive">
     </div>
     </div>
+</div>
   
- <hr class="section-divider divider-3">
-
-<section class="photo-gallery">
-  <div class="overlay-box"></div>
-  <h2 class="section-title">Galleri</h2>
-  <?php the_content() ?>
-</section>
 
 
 

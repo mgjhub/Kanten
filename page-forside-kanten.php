@@ -6,7 +6,7 @@
   <style>
 
 body {
-  background-color: #1A1010;
+  background-color: #3a2d28;
   color: #f2f2f2;
   margin: 0;
   font-family: "ATF Franklin Gothic", Arial, sans-serif;
@@ -243,9 +243,16 @@ padding: 40px;
   margin-right: auto;
 }
 
+.events-box{
+    background-image: url('<?php echo get_template_directory_uri() ?>/images/forside1.jpg');
+    padding: 5rem 0;
+    box-shadow:  0 0 50px #080605;
+}
+
 .section-title {
   text-align: center;
   font-size: 40px;
+  text-shadow: 0 0 5px #000;
 }
 
 .image-links {
@@ -273,7 +280,7 @@ padding: 40px;
 
 .content-wrapper {
   display: flex;
-  padding: 75px;
+  padding: 0 75px;
 }
 
 .local-artist {
@@ -284,7 +291,9 @@ padding: 40px;
 }
 
 .local-artist h2 {
+  text-align: center;
   font-size: 40px;
+  text-shadow: 0 0 5px #000;
   margin-bottom: 75px;
 }
     
@@ -313,8 +322,9 @@ padding: 40px;
 .upcoming-events {
   width: 50%;
   margin-bottom: 20px;
-  margin-left: 40px;
+  margin-left: 60px;
   text-align: center;
+  border: 2px solid #f6f6f6;
 }
 
 .read-more-button,
@@ -340,12 +350,13 @@ padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-left: 20px;
 }
 
 .event-container h2 {
-  font-size: 40px; 
-  margin-bottom: 50px; 
+  text-align: center;
+  font-size: 40px;
+  text-shadow: 0 0 5px #000;
+  margin: 30px 0; 
 }
 
 .se-flere {
@@ -356,17 +367,19 @@ padding: 40px;
   margin-right: 10px;
   margin-left: 10px;
   border: 2px solid #f2f2f2;
-  margin-top: 20px;
+  margin: 2.5rem 0;
 }
 
 .event-box {
   display: flex;
   margin-bottom: 20px;
+  border-top: 2px solid #f2f2f2;
+  border-bottom: 2px solid #f2f2f2;
 }
 
 .event-image {
   width: 300px;
-  height: 200px;
+  height: 175px;
 }
 
 .event-image img {
@@ -377,7 +390,7 @@ padding: 40px;
 
 .event-info {
   width: 60%;
-  background-color: #333;
+  background-color: #3a2d28;
   color: #f2f2f2;
   padding: 20px;
   display: flex;
@@ -385,9 +398,15 @@ padding: 40px;
   justify-content: space-between;
 }
 
-.event-info h3,
+.event-info h3{
+  margin: 0;
+  text-shadow: 0 0 5px #000;
+  font-size: 25px;
+}
+
 .event-info p {
   margin: 0;
+  line-height: 2rem;
 }
 
 .event-button {
@@ -415,12 +434,13 @@ padding: 40px;
   scroll-padding: 10px;
   width: 80%;
   margin: 0 auto;
+  align-items: center;
 }
 
 .gallery-slide {
   flex-shrink: 0;
   width: calc(100% / 3);
-  padding: 0 20px;
+  padding: 20px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -430,6 +450,7 @@ padding: 40px;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  box-shadow: 2px 2px 10px #080605;
 }
 
 .navigation-arrow {
@@ -459,14 +480,17 @@ padding: 40px;
 
 .text-section {
   margin-bottom: 75px;
-  padding-right: 100px;
-  padding-left: 100px;
+  padding: 100px;
+  background-image: url('<?php echo get_template_directory_uri() ?>/images/Forside2.jpg');
+  box-shadow:  0 0 50px #080605;
+  background-size: cover;
 }
 
 .section-headline {
   font-size: 40px;
   text-align: center;
   margin: 0;
+  text-shadow: 0 0 5px #000;
 }
 
 .text-content {
@@ -477,19 +501,29 @@ padding: 40px;
 }
 
 .text-column {
-  width: 66%;
+  background-color: #3a2d28;
+  border: 2px solid #f6f6f6;
+  box-shadow: inset 0 0 20px #080605;
+  width: 50%;
   height: fit-content;
-  padding-right: 20px;
+  padding: 3rem 2rem;
+  margin-left: 7rem;
+  margin-right: 5rem;
+}
+
+.text-column p {
+    line-height: 1.2rem;
 }
 
     .logo-column {
-      width: 33%;
+      width: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       height: fit-content;
-      padding-left: 20px;
+      padding-right: 20px;
       padding-top: 40px;
+      margin-right: 7rem;
     }
     
     .logo-bottom {
@@ -498,7 +532,7 @@ padding: 40px;
     }
     
 .footer {
-  background-color: black;
+  background-color: #211a17;
   padding: 75px;
   display: flex;
   align-items: center;
@@ -511,13 +545,14 @@ padding: 40px;
   display: inline-block;
   width: 100px;
   height: 50px;
+  margin-left: 50px;
 }
-
-    .footer .logo img {
-        max-height: 50px;
+    
+.footer .logo img {
+  max-height: 50px;
   filter: invert(100%);
   padding-top: 12px;
-    }
+}
 
 .footer-left {
   flex: 1;
@@ -570,23 +605,6 @@ padding: 40px;
   padding-right: 5px;
 }
 
-.newsletter-form {
-  display: flex;
-  margin-bottom: 10px; 
-}
-
-.newsletter-input {
-  flex: 1;
-  padding: 5px;
-}
-
-.newsletter-button {
-  margin-left: 10px;
-  padding: 5px 10px;
-  background-color: #333;
-  color: #f2f2f2;
-  border: none;
-}
 
 .social-media-icons {
   display: flex;
@@ -711,6 +729,11 @@ header {
 }  
     
 @media (max-width: 1200px) {
+    
+    .hero {
+        height: 55vh;
+    }
+    
   .image-links {
     flex-wrap: wrap;
     justify-content: center;
@@ -739,6 +762,29 @@ header {
     padding: 0;
   }
   
+  .event-image {
+  width: 300px;
+  height: 250px;
+  }
+  
+  .event-info h3 {
+      font-size: 28px;
+  }
+  
+  
+  .event-info p {
+      font-size: 22px;
+  }
+  
+  .event-button {
+      font-size: 30px;
+  }
+  
+  .se-flere {
+      font-size: 30px;
+      margin: 3rem 0;
+  }
+  
   .local-artist {
     width: 100%;
     margin: 0;
@@ -755,14 +801,16 @@ header {
   
 .text-content {
   flex-direction: column;
+  padding: 75px;
 }
 
 .text-column {
   width: 100%;
+  margin: 0;
 }
 
     .logo-column {
-      width: 100%;
+      display: none;
     }
 
     .gallery-slide {
@@ -774,7 +822,36 @@ header {
     height: 100%;
   }
   
+  .navigation-arrow {
+      font-size: 100px;
+  }
+  
 }
+
+@media (max-width: 950px) {
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+        height: fit-content;
+    }
+    
+    .footer-left, .footer-middle, .footer-right {
+        flex: none;
+    }
+    
+    .footer-middle {
+        align-items: flex-start;
+    }
+    
+    .footer-middle .logo {
+        margin: 0;
+    }
+    
+    .footer-middle .footer-text {
+        text-align: left;
+    }
+}
+
 
 @media (max-width: 900px) {
   .box h2 {
@@ -799,6 +876,10 @@ header {
     width: 50%; 
   }
   
+  .navigation-arrow {
+      font-size: 50px;
+  }
+  
 }
     
 @media (max-width: 600px) {
@@ -815,6 +896,7 @@ header {
     font-size: 25px;
   }
 }
+
     
 
 </style>
@@ -847,22 +929,22 @@ header {
   </header>
 
     <section class="hero">
-     <iframe src="https://www.youtube.com/embed/A1KSXFeNtPc?autoplay=1&loop=0controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+     <iframe src="https://www.youtube.com/embed/A1KSXFeNtPc?playlist=A1KSXFeNtPc&loop=1&autoplay=1&mute=1&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <div class="transparent-box">
   <div class="box">
     <h2>Antal events i år</h2>
     <p class="box-number" id="event-count">8</p>
-    <a href="http://kantenesbjerg.com/events/" class="box-button">Se Events</a>
+    <a href="/events/" class="box-button">Se Events</a>
   </div>
   <div class="box">
     <h2>Antal frivillige</h2>
     <p class="box-number" id="volunteer-count">9</p>
-    <a href="http://kantenesbjerg.com/frivillig/" class="box-button">Læs Mere</a>
+    <a href="/frivillig/" class="box-button">Læs Mere</a>
   </div>
   <div class="box">
     <h2>Antal medlemmer</h2>
     <p class="box-number" id="member-count">7</p>
-    <a href="http://kantenesbjerg.com/medlem/" class="box-button">Læs Mere</a>
+    <a href="/medlem/" class="box-button">Læs Mere</a>
   </div>
 
   <script>
@@ -904,21 +986,24 @@ header {
 
   <hr class="section-divider">
 
+<div class="events-box">
   <h2 class="section-title">De 4 største events</h2>
   <section class="image-links">
-  <a href="http://kantenesbjerg.com/mana-club/">
+  <a href="/mana-club/">
     <img src="<?php echo get_template_directory_uri() ?>/images/ManaClubHvid.png" alt="ManaClub">
   </a>
-  <a href="http://kantenesbjerg.com/vertex/">
+  <a href="/vertex/">
     <img src="<?php echo get_template_directory_uri() ?>/images/Vertex1BG.png" alt="Vertex">
   </a>
-  <a href="http://kantenesbjerg.com/x-massive/">
+  <a href="/x-massive/">
     <img src="<?php echo get_template_directory_uri() ?>/images/Xm1BG.png" alt="X-Massive">
   </a>
-  <a href="http://kantenesbjerg.com/deft/">
+  <a href="/deft/">
     <img src="<?php echo get_template_directory_uri() ?>/images/Deft1BG.png" alt="DEFT">
   </a>
 </section>
+</div>
+
 
 <hr class="section-divider">
 
@@ -971,7 +1056,7 @@ header {
     	</div>
      </div>
     </div>
-   <div class="event-box">
+   <div class="event-box" style="margin: 0">
       <div class="event-image">
         <img src="<?php echo get_template_directory_uri() ?>/images/vertex1.jpg " alt="vertex1">
       </div>
@@ -987,11 +1072,9 @@ header {
     	</div>
      </div>
     </div>
-<div style="text-align: center; margin-top: 20px;">
+<div style="text-align: center; display: flex; justify-content: center;">
   <a href="/program" class="se-flere">Gå til program</a>
 </div>
-
-<a href="/events"></a>
 
   </div>
  </div>
@@ -1010,14 +1093,14 @@ header {
 
 <section class="text-section">
   <div class="text-content">
+    <div class="logo-column">
+      
+    </div>
     <div class="text-column">
-      <h2 class="section-headline">Kanten</h2>
+    <h2 class="section-headline">Kanten</h2>
 <p> Kanten er et fællesskab for koncerter, begivenheder og unge i Esbjerg, som er drevet af foreningen Kanten. Vores vision er at etablere en platform dedikeret til at fremme det kreative vækstlag, og derved give det en fremtrædende tilstedeværelse i Esbjergs kulturliv. Gennem denne platform, ønsker vi at støtte de fællesskaber, der opstår i de spirende kreative miljøer. </p>
 
 <p> Vores værdier er fællesskab, inklusivitet og kreativitet, og de danner grundlaget for alt, hvad vi gør. Vores mission er at skabe en platform for de unge, som er skabt af de unge, hvor kunstneriske og kreative udfoldelser og musik trives. Vores mål er at vi igennem vores platform kan styrke og opløfte unge, vise deres talenter og give mulighed for at udtrykke deres kunstneriske sider. Vi stræber efter at skabe et rum, der hylder mangfoldighed, og tilskynder et fællesskab og samarbejde mellem unge fra forskellige baggrunde. </p> 
-    </div>
-    <div class="logo-column">
-      <img class="logo-bottom" src="<?php echo get_template_directory_uri() ?>/images/Kanten-logo.png" alt="Logo">
     </div>
   </div>
 </section>
@@ -1027,10 +1110,10 @@ header {
 <footer class="footer">
   <div class="footer-left">
     <h3>For unge drevet af unge</h3>
-    <a href="http://kantenesbjerg.com/events/">Events</a>
-    <a href="http://kantenesbjerg.com/program/">Program</a>
-    <a href="http://kantenesbjerg.com/kraftvaerket/">Kraftværket</a>
-    <a href="http://kantenesbjerg.com/om-os/">Om os</a>
+    <a href="/events/">Events</a>
+    <a href="/program/">Program</a>
+    <a href="/kraftvaerket/">Kraftværket</a>
+    <a href="/om-os/">Om os</a>
   </div>
 
   <div class="footer-middle">

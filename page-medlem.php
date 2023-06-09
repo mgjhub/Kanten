@@ -7,7 +7,7 @@
     <style type="text/css">
 
     body {
-      background-color: #1C1C1C;
+      background-color: #3a2d28;
       color: #f2f2f2;
       margin: 0;
       font-family: "ATF Franklin Gothic", Arial, sans-serif;
@@ -186,7 +186,7 @@ padding: 40px;
 }
 
  .medlem-title {
-      padding: 250px 100px 0 100px;
+      padding: 150px 100px 0 100px;
       text-align: center;
       font-size: 50px;
     }
@@ -238,29 +238,28 @@ padding: 40px;
         .container {
             display: flex;
             width: 100%;
-            padding: 75px;
+            padding: 25px 75px 100px 75px;
             box-sizing: border-box;
         }
 
         .form-container {
             width: 50%;
             padding: 20px;
-            background: #464646;
+            background: #605a54;
             color: black;
         }
 
         .image-container {
             width: 50%;
-            padding-left: 20px;
+            margin-left: 20px;
             display: flex;
             justify-content: center;
-          
-          	
+            border: 5px solid #f6f6f6;
         }
 
         .image-container img {
           width: 100%;
-          height: auto;
+          height: 100%;
           object-fit: cover;
         }
       
@@ -278,7 +277,7 @@ padding: 40px;
   }
       
 .footer {
-  background-color: black;
+  background-color: #211a17;
   padding: 75px;
   display: flex;
   align-items: center;
@@ -287,18 +286,23 @@ padding: 40px;
   height: 100px;
 }
 
+.footer p {
+  margin: 1em 0;
+  line-height: 1rem;
+}
+
 .footer .logo {
   display: inline-block;
   width: 100px;
   height: 50px;
+  margin-left: 50px;
 }
-
- 
-    .footer .logo img {
-        max-height: 50px;
+    
+.footer .logo img {
+  max-height: 50px;
   filter: invert(100%);
   padding-top: 12px;
-    }     
+}   
  
 .footer-left {
   flex: 1;
@@ -346,33 +350,16 @@ padding: 40px;
   padding-right: 5px;
 }
 
-.newsletter-form {
-  display: flex;
-  margin-bottom: 10px; 
-}
-
-.newsletter-input {
-  flex: 1;
-  padding: 5px;
-}
-
-.newsletter-button {
-  margin-left: 10px;
-  padding: 5px 10px;
-  background-color: #333;
-  color: #f2f2f2;
-  border: none;
-}
-
-    
  .mc-field-group {
     display: flex;
     align-items: center;
+    height: 22px;
   }
   
-  .mc-field-group input[type="email"] {
-    margin-right: 10px;
+  .mc-field-group .button {
+      margin-left: 4px!important;
   }
+
     
 .social-media-icons {
   display: flex;
@@ -525,6 +512,7 @@ header {
   
   .medlem-title {
     font-size: 35px;
+    padding-top: 200px;
   }
     
   .logo-bottom {
@@ -572,6 +560,8 @@ header {
   
   .container {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   .form-container {
@@ -581,17 +571,46 @@ header {
   
   .image-container {
     width: 100%;
-    padding-top: 25px;
     display: flex;
-    justify-content: center;
-    padding-left: 0;
+    padding: 0;
+    margin-left: 0;
+    margin-top: 50px;
   }
 } 
+
+@media (max-width: 950px) {
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+        height: fit-content;
+    }
+    
+    .footer-left, .footer-middle, .footer-right {
+        flex: none;
+    }
+    
+    .footer-middle {
+        align-items: flex-start;
+    }
+    
+    .footer-middle .logo {
+        margin: 0;
+    }
+    
+    .footer-middle .footer-text {
+        text-align: left;
+    }
+}
       
 @media (max-width: 600px) {
   
   .medlem-title {
     font-size: 25px;
+    padding: 200px 75px 0 75px;
+  }
+  
+  .outer-text-box {
+      padding: 0 75px;
   }
       
   .logo-container {
@@ -688,7 +707,7 @@ header {
         <div id="mc_embed_signup">
             <form action="https://easv365.us21.list-manage.com/subscribe/post?u=114b6f34947847e7f1bc1a036&amp;id=0c1551c060&amp;f_id=005f55e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                 <div id="mc_embed_signup_scroll">
-                    <h2>Tilmeld dig Kanten!</h2>
+                    <h2 style="padding: 1rem 0;">Tilmeld dig Kanten!</h2>
                     <div class="indicates-required"></div>
                     <div class="mc-field-group">
                         <label for="mce-MMERGE1">Fornavn</label>
@@ -726,7 +745,7 @@ header {
     </div>
 
     <div class="image-container">
-        <img src="<?php echo get_template_directory_uri() ?>/images/KantenFællesskab1.jpg" alt="KantenFællesskab">
+        <img src="<?php echo get_template_directory_uri() ?>/images/fælleskab-kanten.jpg" alt="KantenFællesskab">
     </div>
 </div>
   

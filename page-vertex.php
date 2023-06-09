@@ -5,7 +5,7 @@
   <style>
 
     body {
-      background-color: #1C1C1C;
+      background-color: #3a2d28;
       color: #f2f2f2;
       margin: 0;
       background-image: url('<?php echo get_template_directory_uri() ?>/images/vertexback8.png');
@@ -174,22 +174,24 @@ padding: 40px;
   font-weight: bold;
 }    
 
-
- /* Hero image */    
-.hero {
-  position: relative;
-  height: 108vh;
-  overflow: hidden;
-  display: flex; 
-  justify-content: center;
-  align-items: center;
-}
-
-.hero img {
-  height: 100%;
-}
+/* Hero */
     
-    .section-divider {
+    
+    .hero {
+      position: relative;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      object-fit: cover;
+    }
+    
+.section-divider {
     border: 1px solid #1c1c1c; 
     margin: 100px 0; 
     width: 92%;
@@ -294,6 +296,7 @@ padding: 40px;
  .photo-gallery {
   position: relative;
   padding 0 75px;
+  margin-bottom: 75px;
 }
 
 .photo-gallery .overlay-box {
@@ -311,7 +314,7 @@ padding: 40px;
   .image-with-text {
 		display: flex;
       	width: 100%;
-      	height: 200px;
+      	height: 150px;
       	justify-content: center;
       	align-items: center;
         margin-bottom: 100px;
@@ -592,9 +595,18 @@ header {
          line-height: 1.3rem;
          }
        }
-    }  
-    @media (max-width: 1200px){
-
+       
+        @media (max-width: 1250px){
+      
+        .hero {
+    height: 75vh;
+  }
+        }
+        
+      @media (max-width: 1200px){
+        .hero {
+    height: 80vh;
+  }
 
               .container-top {
                 display: flex;
@@ -603,8 +615,8 @@ header {
                 justify-content: center;
                 align-items: center;
               }
-                  
-                  .box {
+              
+               .box {
                     max-width: 80%;
                   }
               
@@ -626,10 +638,11 @@ header {
                 justify-content: center;
                 align-items: center;
               }
-
-      .hero {
-        height: 80vh;
-      }
+         
+        .hero {
+    height: 70vh;
+              margin-top: 215px;
+  	}
           .gallery-slide {
     width: calc(100% / 1);
       height: 100%;
@@ -639,9 +652,63 @@ header {
     height: 100%;
   }
    }
+      
+@media (max-width: 1000px){
+    .hero {
+        height: auto;
+        width: 100vw;
+    }
     
-       
-       
+    .hero img {
+        position: relative;
+    }
+}
+
+@media (max-width: 950px) {
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+        height: fit-content;
+    }
+    
+    .footer-left, .footer-middle, .footer-right {
+        flex: none;
+    }
+    
+    .footer-middle {
+        align-items: flex-start;
+    }
+    
+    .footer-middle .logo {
+        margin: 0;
+    }
+    
+    .footer-middle .footer-text {
+        text-align: left;
+    }
+}
+
+@media (max-width: 700px) {
+.box {
+  max-width: 100%;
+}
+
+.box.right {
+  margin: 0;
+  padding: 25px 75px 125px 75px;
+}
+
+.box.left {
+  margin: 0;
+  padding: 75px 75px 25px 75px;
+}
+}
+
+@media (max-width: 600px) {
+    .image-with-text {
+        height: 100px;
+    }
+}    
 
 </style>
 </head>
@@ -674,7 +741,7 @@ header {
 
 <section class="hero">
   <div class="hero-content">
-    <img src="<?php echo get_template_directory_uri() ?>/images/vertex-hero.jpg" alt="vertexhero">
+    <img src="<?php echo get_template_directory_uri() ?>/images/vertex.jpg" alt="vertexhero">
   </div>
 </section>
 
@@ -698,13 +765,22 @@ header {
     </div>
   </div>
 
+ <hr class="section-divider">
+
+<section class="photo-gallery">
+  <div class="overlay-box"></div>
+  <div class="image-with-text">
+    <img src="<?php echo get_template_directory_uri() ?>/images/vertexbannergalleri.png" alt="vertex3">
+  </div>
+  <?php the_content() ?>
+</section>
 
     <hr class="section-divider">
 
     <div class="container-bottom">
     <div class="box right overlay-box">
         <div class="text">
-            <h2>Om Eventet/Musikken</h2>
+            <h2>Om Vertex</h2>
 <p>House opkaldt efter diskoteket the Warehouse i Chicago blev stilen udviklet af discjockeys, primært på grund af disco og synthesizermusik tilsat elektroniske lyde og beats.</p>
 <p>Musikken bliver primært skabt på computeren igennem en teknologi kaldt MIDI (Musical Instrument Digital Interface). Ser man på discjockeyens traditionelle arbejdsredskaber bruger de to grammofoner og en mikser til at skabe den ekstatiske musik som vi kender.</p>
 
@@ -716,15 +792,6 @@ header {
     </div>
     </div>
 </div>
- <hr class="section-divider">
-
-<section class="photo-gallery">
-  <div class="overlay-box"></div>
-  <div class="image-with-text">
-    <img src="<?php echo get_template_directory_uri() ?>/images/vertexbannergalleri.png" alt="vertex3">
-  </div>
-  <?php the_content() ?>
-</section>
 
 
 

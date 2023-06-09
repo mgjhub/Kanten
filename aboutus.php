@@ -19,7 +19,7 @@ endif;
 <style>
 
 body {
-    background-color: #141414;
+    background-color: #3a2d28;
 }
 
 .entry-title {
@@ -83,8 +83,8 @@ h1 {
 
 .about-columns {
     margin: 6rem 100px!important;
-    background-color: #464646;
-    border: #1e1e1e 5px solid; 
+    background-color: #54413a;
+    border: #211a17 5px solid; 
 }
 
   .wp-container-8{
@@ -102,7 +102,7 @@ h1 {
   }
 
 .contact-form-column {
-    background-color: #1e1e1e;
+    background-color: #211a17;
     color: #f2f2f2;
   	width: 50%;
   	padding: 1rem 5rem;
@@ -188,14 +188,21 @@ h1 {
     margin: 15px 0;
   }
   
+  
+  
   .image-box {
-    width: 80vw;
-    padding: 1rem 100px;
+    width: auto;
+    padding: 0;
+    }
+  
+  .image img {
+      padding: 1rem 100px;
   }
   
+  
     .text-area {
-    width: 80vw;
-      padding: 1rem 100px;
+    width: auto;
+    padding: 1rem 100px;
   }
     .about-columns {
         flex-direction: column;
@@ -208,5 +215,25 @@ h1 {
     width: auto;
   }
 }
+
+@media (max-width: 600px)  {
+    h1 {
+        font-size: 100px;
+    }
+    
+    .text-area, .image img {
+        padding: 1rem 75px;
+    }
+    
+    .about-columns {
+        margin: 6rem 75px!important;
+        
+    }
+    
+    .about-contact-column, .contact-form-column {
+        padding: 1rem 2.5rem;
+    }
+}
+
 
 </style>

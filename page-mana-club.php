@@ -5,7 +5,7 @@
   <style>
 
     body {
-      background-color: #1C1C1C;
+      background-color: #050409;
       color: #f2f2f2;
       margin: 0;
       font-family: "ATF Franklin Gothic", Arial, sans-serif;
@@ -179,27 +179,29 @@ padding: 40px;
 
     
 
- /* Hero image */    
-.hero {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  display: flex; 
-  justify-content: center;
-  align-items: center;
-}
+  /* Hero */
+    
+    
+    .hero {
+      position: relative;
+      height: 90vh;
+      width: 100vw;
+      overflow: hidden;
+    }
 
-.hero img {
-  height: 100%;
-}
+    .hero img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      object-fit: cover;
+    }
     
     .section-divider {
     border: 1px solid #AF73BF; 
-    margin: 100px 0; 
+    margin: 100px auto; 
     width: 92%;
-    margin-left: auto;
-    margin-right: auto;
 }
+
 
     .manaclub-headline {
 		display: flex;
@@ -319,6 +321,7 @@ padding: 40px;
 .photo-gallery {
   padding: 0 75px;
   position: relative;
+  margin-bottom: 75px;
 }
 
 .transparent-box {
@@ -348,12 +351,13 @@ padding: 40px;
   scroll-padding: 10px;
   width: 80%;
   margin: 0 auto;
+  align-items: center;
 }
 
 .gallery-slide {
   flex-shrink: 0;
   width: calc(100% / 3);
-  padding: 0 20px;
+  padding: 20px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -361,10 +365,10 @@ padding: 40px;
 
 .gallery-slide img {
   width: 100%;
-  height: 500px;
+  height: 100%;
   object-fit: cover;
+  box-shadow: 2px 2px 10px #080605;
 }
-
 
 .navigation-arrow {
   position: absolute;
@@ -606,7 +610,8 @@ header {
   } 
 }  
 
-  @media (max-width: 1500px){
+
+ @media (max-width: 1500px){
       
         .hero {
     height: 85vh;
@@ -619,10 +624,16 @@ header {
          line-height: 1.3rem;
          }
        }
-    }  
-    
-  @media (max-width: 1200px){
-    
+       
+        @media (max-width: 1250px){
+      
+        .hero {
+    height: 75vh;
+  }
+        }
+        
+      @media (max-width: 1200px) {
+
               .container-top {
                 display: flex;
                 flex-direction: column;
@@ -630,8 +641,8 @@ header {
                 justify-content: center;
                 align-items: center;
               }
-    
-    			 .box {
+              
+               .box {
                     max-width: 80%;
                   }
               
@@ -653,8 +664,11 @@ header {
                 justify-content: center;
                 align-items: center;
               }
-
-      
+         
+        .hero {
+    height: 70vh;
+              margin-top: 215px!important;
+  	}
           .gallery-slide {
     width: calc(100% / 1);
       height: 100%;
@@ -664,6 +678,63 @@ header {
     height: 100%;
   }
    }
+      
+@media (max-width: 1000px){
+    .hero {
+        height: auto;
+        width: 100vw;
+    }
+    
+    .hero img {
+        position: relative;
+    }
+}
+
+@media (max-width: 950px) {
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+        height: fit-content;
+    }
+    
+    .footer-left, .footer-middle, .footer-right {
+        flex: none;
+    }
+    
+    .footer-middle {
+        align-items: flex-start;
+    }
+    
+    .footer-middle .logo {
+        margin: 0;
+    }
+    
+    .footer-middle .footer-text {
+        text-align: left;
+    }
+}
+
+@media (max-width: 700px) {
+.box {
+  max-width: 100%;
+}
+
+.box.right {
+  margin: 0;
+  padding: 25px 75px 125px 75px;
+}
+
+.box.left {
+  margin: 0;
+  padding: 75px 75px 25px 75px;
+}
+}
+
+@media (max-width: 600px) {
+.manaclub-headline, .image-with-text  {
+  height: 65px;
+}
+}
 
 </style>
 </head>
@@ -696,19 +767,20 @@ header {
 
 
   <section class="hero">
-    <img src="<?php echo get_template_directory_uri() ?>/images/mana-hero.jpg" alt="Mana">
+    <img src="<?php echo get_template_directory_uri() ?>/images/backmana-lille.jpg" alt="Mana">
   </section>
   
+<div class="container">  
   <hr class="section-divider">
 
   <div class="manaclub-headline">
   <img src="<?php echo get_template_directory_uri() ?>/images/mana-png.png" alt="manatext1">
   </div>
 
-  <div class="container">
+  
   <div class="container-top">
     <div class="box left overlay-box">
-      <img src="<?php echo get_template_directory_uri() ?>/images/manaclub1.jpg" alt="manaclub1">
+      <img src="<?php echo get_template_directory_uri() ?>/images/rave-party.jpg" alt="manaclub1">
     </div>
     <div class="box right overlay-box">
       <div class="text">
@@ -724,6 +796,19 @@ header {
 
   
    <hr class="section-divider">
+   
+   <section class="photo-gallery">
+   <div class="transparent-box"></div> 
+  <div class="image-with-text">
+    <img src="<?php echo get_template_directory_uri() ?>/images/mana-png-galleri.png" alt="manaclub3">
+  </div>
+  <?php the_content() ?>
+</section>
+
+  
+   <hr class="section-divider">
+   
+   
     <div class="container-bottom">
     <div class="box right overlay-box">
         <div class="text">
@@ -738,20 +823,9 @@ header {
         <img src="<?php echo get_template_directory_uri() ?>/images/manaclub1.jpg" alt="manaclub1">
     </div>
     </div>
-    </div>
+
     <hr class="section-divider">
-   
-
-<section class="photo-gallery">
-   <div class="transparent-box"></div> 
-  <div class="image-with-text">
-    <img src="<?php echo get_template_directory_uri() ?>/images/mana-png-galleri.png" alt="manaclub3">
-  </div>
-  <?php the_content() ?>
-</section>
-
-  
-   <hr class="section-divider">
+    </div>   
   
 <footer class="footer">
   <div class="footer-left">

@@ -21,7 +21,7 @@ endif;
 
   
 body {
-    background-color: #141414;
+    background-color: #3a2d28;
 }
 
 .entry-title {
@@ -43,6 +43,7 @@ h1 {
     justify-content: center;
     align-items: center;
   	margin: 1rem 100px; 
+  	height: fit-content;
 }
 
 .image-box {
@@ -51,16 +52,31 @@ h1 {
     justify-content: center;
     align-items: center;
     padding-right: 50px;
+    height: fit-content;
 }
 
 .image {
-    max-height: 75vh; 
+    width: 80%;
+    height: 100%;
+    border: 5px solid #f6f6f6;
+    margin: 0;
+}
+
+.image img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
 .text-area {
     width: 50vw;
     padding-left: 50px;
     color: #f2f2f2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
   
   .text-area p {
@@ -82,12 +98,14 @@ h1 {
     margin: 6rem 100px;
     height: fit-content;
     display: flex!important;
+    align-items: center;
+    justify-content: center;
 }
 
 .contact-box {
-    background-color: #1e1e1e;
-    border: solid 5px #1e1e1e;
-    height: fit-content;
+    background-color: #211a17;
+    border: solid 5px #211a17;
+    height: 100%;
     width: 50%;
 }
 
@@ -115,7 +133,7 @@ h1 {
 }
 
 .contact-info {
-    background-color: #464646;
+    background-color: #54413a;
     color: #f2f2f2;
     padding: 1rem 5rem;
 }
@@ -181,6 +199,19 @@ h1 {
     justify-content: center;
     align-items: center;
     width: 50%;
+  }
+  
+  .image-large {
+      width: 100%;
+      border: 5px solid #f6f6f6;
+      height: 100%;
+      margin: 0.1rem 0;
+  }
+  
+    .image-large img {
+      object-fit: cover;
+      height: 100%;
+      
   }
 
   /* Media Query */
@@ -255,6 +286,9 @@ h1 {
     h1 {
       font-size: 75px;
     }
+    .contact-text-box {
+        padding: 0;
+    }
   }
   
   @media (max-width: 800px) {
@@ -270,6 +304,7 @@ h1 {
     h1 {
       font-size: 60px;
     }
+
     
     .text-box-headline {
       font-size: 25px;
@@ -282,6 +317,10 @@ h1 {
     }
     .contact-info p, .wpforms-field-label, .wpforms-field-container input, .wpforms-field-medium {
       font-size: 16px!important;
+    }
+    
+    .img-text-box {
+        margin: 1rem 75px;
     }
   }
 </style>

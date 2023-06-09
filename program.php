@@ -19,7 +19,7 @@ endif;
 <style>
 
 body {
-    background-color: #141414;
+    background-color: #3a2d28;
   font-family: "ATF Franklin Gothic", Arial, sans-serif;
 }
 
@@ -44,7 +44,7 @@ h1 {
 .event-box {
   width: 100%;
   height: 350px;
-  background: #464646;
+  background: #605a54;
 
   /* top left - bottom right */        
   -webkit-clip-path: polygon(0 25%, 0 100%, 95% 100%, 100% 75%, 100% 0, 05% 0);
@@ -123,6 +123,9 @@ h1 {
 
 .button-box {
   padding-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .event-btn {
@@ -158,4 +161,68 @@ h1 {
     }
   }
   
-
+  @media (max-width: 1000px) {
+    
+    .wp-block-lazyblock-program-event {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+      
+      
+    .event-box {
+        flex-direction: column;
+        justify-content: center;
+        height: fit-content;
+        width: 75%;
+          -webkit-clip-path: polygon(0 10%, 0 100%, 90% 100%, 100% 90%, 100% 0, 10% 0);
+          clip-path: polygon(0 10%, 0 100%, 90% 100%, 100% 90%, 100% 0, 10% 0);
+          
+    }
+    
+    .image-box {
+    width: 100%;
+    padding:0;
+    }
+    
+    .image {
+        width: 100%;
+        height: 300px;
+    }
+    
+    .text-area {
+    width: 100%;
+    }
+    
+  }
+  
+  @media (max-width: 850px) {
+    
+    h1 {
+        font-size: 100px;
+    }
+    
+    .event-box {
+        width: 100%;
+    }
+    
+  }
+  
+  
+  @media (max-width: 700px) {
+        .event-headline {
+        font-size: 30px;
+    }
+    
+    .event-time {
+        font-size: 18px; 
+    }
+  }
+  
+    @media (max-width: 600px) {
+        .wp-block-lazyblock-program-event {
+            margin: 0 50px;
+        }
+  }
+  

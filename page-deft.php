@@ -5,12 +5,13 @@
   <style>
 
     body {
-      background-color: #1C1C1C;
+      background-color: #3a2d28;
       color: #f2f2f2;
       margin: 0;
       background-image: url('<?php echo get_template_directory_uri() ?>/images/WallGrafitti.jpg ');
       background-position: center;
       font-family: "ATF Franklin Gothic", Arial, sans-serif;
+      background-size: 100% auto;
     }
 /* Navbar */
     
@@ -174,21 +175,22 @@ padding: 40px;
   font-weight: bold;
 }    
 
-    /* Hero */
+  /* Hero */
     
-
+    
     .hero {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  display: flex; 
-  justify-content: center;
-  align-items: center;
-}
+      position: relative;
+      height: 90vh;
+      width: 100vw;
+      overflow: hidden;
+    }
 
-.hero img {
-  height: 100%;
-}
+    .hero img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      object-fit: cover;
+    }
 
     
     .section-divider {
@@ -299,6 +301,7 @@ padding: 40px;
 .photo-gallery {
   padding: 0 75px;
   position: relative;
+   margin-bottom: 75px;
 }
 
 .transparent-box {
@@ -584,7 +587,8 @@ header {
       border: 2px solid #f2f2f2;
   } 
 }  
-     @media (max-width: 1500px){
+
+ @media (max-width: 1500px){
       
         .hero {
     height: 85vh;
@@ -597,13 +601,19 @@ header {
          line-height: 1.3rem;
          }
        }
-    }
-            @media (max-width: 1200px){
+       
+        @media (max-width: 1250px){
       
+        .hero {
+    height: 75vh;
+  }
+        }
+        
+      @media (max-width: 1200px){
         .hero {
     height: 80vh;
   }
-              
+
               .container-top {
                 display: flex;
                 flex-direction: column;
@@ -634,16 +644,7 @@ header {
                 justify-content: center;
                 align-items: center;
               }
-
-              
- @media (max-width: 1250px){
-      
-        .hero {
-    height: 75vh;
-  }
-    
-    @media (max-width: 1200px){
-      
+         
         .hero {
     height: 70vh;
               margin-top: 215px;
@@ -658,49 +659,56 @@ header {
   }
    }
       
-     @media (max-width: 1000px){
-      
-        .hero {
-    height: 35vh;
-  }
-        
-       @media (max-width: 850px){
-      
-        .hero {
-    height: 35vh;
-  }    
+@media (max-width: 1000px){
+    .hero {
+        height: auto;
+        width: 100vw;
     }
-       
+    
+    .hero img {
+        position: relative;
+    }
+}
 
-@media (max-width: 750px){
-      
-        .hero {
-    height: 45vh;
-  }    
+@media (max-width: 950px) {
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+        height: fit-content;
     }
-       
- @media (max-width: 650px){
-      
-        .hero {
-    height: 38vh;
-  }    
+    
+    .footer-left, .footer-middle, .footer-right {
+        flex: none;
     }
-       
-       
-              
- @media (max-width: 550px){
-      
-        .hero {
-    height: 32vh;
-  }    
+    
+    .footer-middle {
+        align-items: flex-start;
     }
-       
- @media (max-width: 450px){
-      
-        .hero {
-    height: 28vh;
-  }    
+    
+    .footer-middle .logo {
+        margin: 0;
     }
+    
+    .footer-middle .footer-text {
+        text-align: left;
+    }
+}
+
+@media (max-width: 700px) {
+.box {
+  max-width: 100%;
+}
+
+.box.right {
+  margin: 0;
+  padding: 25px 75px 125px 75px;
+}
+
+.box.left {
+  margin: 0;
+  padding: 75px 75px 25px 75px;
+}
+}
 
 </style>
 </head>
@@ -756,6 +764,13 @@ header {
     </div>
   </div>
 
+ <hr class="section-divider">
+
+<section class="photo-gallery">
+  <div class="transparent-box"></div> 
+  <h2 class="section-title">Galleri</h2>
+  <?php the_content() ?>
+</section>
 
     <hr class="section-divider">
 
@@ -775,13 +790,6 @@ header {
 
 <p class="mini-headline" style="font-weight: 600"> Rap</p>
 <p> Rap blev til, da det var tid til nyt udstyr og folket blev introduceret til mikrofoner og kunne pludselig snakke til publikum på en helt ny måde. Her blev der så udviklet en ny stil, hvor de i takt til musikken snakkede til publikum ved at rime.</p>
-
-
-          
-          
-          
-          
-          
           
         </div>
     </div>
@@ -790,13 +798,6 @@ header {
     </div>
     </div>
 </div>
- <hr class="section-divider">
-
-<section class="photo-gallery">
-  <div class="transparent-box"></div> 
-  <h2 class="section-title">Galleri</h2>
-  <?php the_content() ?>
-</section>
 
 
 

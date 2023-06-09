@@ -5,7 +5,7 @@
   <style>
 
     body {
-      background-color: #1C1C1C;
+      background-color: #3a2d28;
       color: #f2f2f2;
       margin: 0;
       font-family: "ATF Franklin Gothic", Arial, sans-serif;
@@ -29,13 +29,14 @@
   padding: 10px;
 }
 
-.logo {
-  display: inline-block;
-  width: 100px;
-  height: 60px;
-  margin-top: 5px;
-  margin-left: 20px;
+.navbar .logo {
+display: inline-block;
+width: 100px;
+height: 60px;
+margin-top: 5px;
+margin-left: 20px;
 }
+  
 
 .navbar .logo img {
   max-height: 150px;
@@ -261,12 +262,11 @@ h1 {
     .event-button {
       margin: 0 10px;
       padding: 10px 20px;
-      background-color: #333;
-      color: #f2f2f2;
       font-size: 18px;
       border: none;
       cursor: pointer;
       border: 2px solid #f2f2f2;
+      background-color: transparent;
     }
     
     .event-button a {
@@ -284,7 +284,7 @@ h1 {
 
 
 .footer {
-  background-color: black;
+  background-color: #211A17;
   padding: 75px;
   display: flex;
   align-items: center;
@@ -297,14 +297,14 @@ h1 {
   display: inline-block;
   width: 100px;
   height: 50px;
+  margin-left: 50px;
 }
     
-    
-    .footer .logo img {
-        max-height: 50px;
+ .footer .logo img {
+  max-height: 50px;
   filter: invert(100%);
   padding-top: 12px;
-    }
+}
 
 .footer-left {
   flex: 1;
@@ -540,12 +540,51 @@ header {
       }
     }
     
-      @media (max-width: 600px) {
+    @media (max-width: 950px) {
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+        height: fit-content;
+    }
+    
+    .footer-left, .footer-middle, .footer-right {
+        flex: none;
+    }
+    
+    .footer-middle {
+        align-items: flex-start;
+    }
+    
+    .footer-middle .logo {
+        margin: 0;
+    }
+    
+    .footer-middle .footer-text {
+        text-align: left;
+    }
+}
+    
+      @media (max-width: 700px) {
+      
+      .events-title h1 {
+          font-size: 100px;
+      }
+      
+      .event-box {
+          padding: 50px;
+      }
+      
       .events-text p {
         font-size: 14px!important;
       }
     }
 
+@media (max-width: 550px) {
+    .event-box img {
+      max-height: 350px;
+      max-width: 350px;
+    }
+}
 
 </style>
 </head>

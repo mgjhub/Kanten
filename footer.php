@@ -7,13 +7,14 @@
     @import url('https://fonts.adobe.com/fonts/atf-franklin-gothic#fonts-section');
 
 .footer {
-  background-color: black;
+  background-color: #211A17;
   padding: 75px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #f2f2f2;
   height: 100px;
+  font-family: "ATF Franklin Gothic", Arial, sans-serif;
 }
     
     .footer h5 {
@@ -136,7 +137,29 @@
   height: 30px; 
 }
 
-
+@media (max-width: 950px) {
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+        height: fit-content;
+    }
+    
+    .footer-left, .footer-middle, .footer-right {
+        flex: none;
+    }
+    
+    .footer-middle {
+        align-items: flex-start;
+    }
+    
+    .footer-middle .logo {
+        margin: 0;
+    }
+    
+    .footer-middle .footer-text {
+        text-align: left;
+    }
+}
 
 </style>
 </head>
